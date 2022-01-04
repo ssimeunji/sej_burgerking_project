@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/** common **/
+.header {
+	width: 100%;
+	height: 168px;
+	background-color:#e22219;
+	position: fixed;
+	z-index: 999;
+}
+.contents_box {
+	width: 100%;
+	height: auto;
+	top: 168px;
+	position: absolute;
+	background-color: #fff;
+}
+/* header */
+.header_top {
+	text-align: right;
+	margin-bottom: 50px;
+}
+.header_top_btn {
+	width: auto;
+	padding: 5px 15px;
+	color: #fff;
+	font-weight: bold;
+	background-color: #e22219;
+	border: none;
+}
+.header_top_line {
+	width: 0.5px;
+	height: 15px;
+	margin-top: 10px;
+	background-color: #fb837d;
+	display: inline-block;
+}
+.header_bottom_l {
+	flex-grow: 99;
+	text-align: left;
+}
+.header_bottom_img {
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+}
+.header_bottom_txt {
+	font-weight: bold;
+	display: inline-block;
+	color: #fff;
+}
+.header_bottom_r {
+	flex-grow: 1;
+}
+.header_bottom_btn {
+	width: auto;
+	height: 50px;
+	padding: 0px 40px;
+	border: none;
+	border-radius: 30px;
+	color: #fff;
+	background-color: #512314;
+	font-weight: bold;
+}
+/* header */
+
+/* location */
+.location_box {
+	width: 100%;
+	height: 58px;
+	background-color: #000;
+	text-align: left;
+	padding-top: 22px;
+}
+.location_txt {
+	color: #fff;
+}
+/* location */
+/** common **/
+
+/* signup input */
+.signup_box {
+	width: 100%;
+	height: auto;
+	background-color: #f2ebe6;
+	padding: 40px;
+}
+.signup_input {
+	width: 600px;
+	height: 60px;
+	display: block;
+	border: none;
+	cursor: text !important;
+	padding: 0px 10px !important;
+	margin: 0 auto;
+}
+.signup_gender_box {
+	width: 600px;
+	height: 30px;
+	margin: 0 auto;
+	text-align: left;
+}
+.signup_gender_check {
+	width: 30px;
+	height: 30px;
+}
+.signup_gender_txt {
+	display: inline-block;
+	padding: 6px 60px 6px 6px;
+}
+.signup_btn_box {
+	width: 600px;
+	padding-top: 60px;	
+	margin: 0 auto;
+}
+.signup_btn {
+	width: 100%;
+	height: 68px;
+	display: block;
+	background-color: #512314;
+	border: none;
+	border-radius: 20px;
+	font-weight: bold;
+	color: #fff;
+	
+}
+.signup_add_txt {
+	width: 600px;
+	margin: 0 auto;
+	text-align: left;
+	padding-top: 11px;
+}
+.signup_address_box {
+	width: 600px;
+	height: auto;
+	margin: 0 auto;
+	text-align: left;
+}
+.signup_address_input {
+	width: 200px !important;
+	display: inline-block;
+}
+.signup_address_btn {
+	width: auto;
+	height: 60px;
+	padding: 0px 30px;
+	margin-left: 15px;
+	background-color: #666;
+	color: #fff;
+	border: none;
+	border-radius: 20px;
+}
+.signup_birth_box {
+	width: 600px;
+	height: auto;
+	margin: 0 auto;
+	text-align: left;
+}
+/* .signup_input_birth {
+	height: 60px;
+}
+.signup_birth_txt {
+	margin: 21px 30px 21px 10px;
+} */
+.signup_birth_input {
+	width: 200px;
+	height: 60px;
+	line-height: normal;
+}

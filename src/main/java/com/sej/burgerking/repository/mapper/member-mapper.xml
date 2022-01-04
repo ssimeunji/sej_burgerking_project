@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="Member">
+
+	<!-- 회원가입 처리 -->
+	<insert id="signup" parameterType="member">
+		insert into member_table_sej(m_id,m_password,m_name,m_gender,m_phone,m_address,m_email,m_birth)
+			values(#{m_id},#{m_password},#{m_name},#{m_gender},#{m_phone},#{m_address},#{m_email},#{m_birth})
+	</insert>
+	
+	<!-- 아이디 중복 체크 -->
+	<select id="idDuplicate" parameterType="String" resultType="String">
+		select m_id from member_table_sej where m_id=#{m_id}
+	</select>
+	
+	<!-- 로그인 -->
+ 	<select id="login" parameterType="member" resultType="member">
+ 		select * from member_table_sej where m_id=#{m_id} and m_password=#{m_password}
+ 	</select>
+ 	
+ 	<!-- 회원 정보 화면 요청(My 킹) -->
+ 	<select id="userInfo" parameterType="long" resultType="member">
+ 		select * from member_table_sej where m_number=#{m_number}
+ 	</select>
+ 	
+ 	<!-- 회원 정보 변경 화면 요청 -->
+ 	<select id="userInfoUpdateForm" parameterType="long" resultType="member">
+ 		select * from member_table_sej where m_number=#{m_number}
+ 	</select>
+ 	
+ 	<!-- 회원 정보 변경 처리 -->
+ 	<update id="userInfoUpdate" parameterType="member">
+ 		update member_table_sej set m_email=#{m_email},m_phone=#{m_phone},m_gender=#{m_gender},m_birth=#{m_birth} where m_number=#{m_number}
+ 	</update>
+ 	
+ 	<!--  회원 탈퇴 화면 요청 -->
+ 	<select id="userDeleteForm" parameterType="long" resultType="member">
+ 		select * from member_table_sej where m_number=#{m_number}
+ 	</select>
+ 	
+ 	<!-- 회원 탈퇴 처리 -->
+ 	<select id="userDelete" parameterType="long">
+ 		delete from member_table_sej where m_number=#{m_number}
+ 	</select>
+</mapper>

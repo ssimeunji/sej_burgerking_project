@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="Notice">
+ 	<!-- search -->
+ 	<select id="search" parameterType="java.util.HashMap" resultType="notice">
+ 		select * from notice_table_sej
+ 		<include refid="sear"></include>
+ 	</select>
+ 	
+ 	<sql id="sear">
+ 		<choose>
+ 			<when test="type=='n_title'">
+ 				where n_title like concat('%',#{word},'%')
+ 			</when>
+ 		</choose>
+ 	</sql>
+ 	
+ 	<!-- paging -->
+ 	<select id="pagingList1" parameterType="java.util.HashMap" resultType="notice">
+ 		select * from notice_table_sej order by n_number desc limit #{start}, #{limit}
+ 	</select>
+ 	<select id="count" resultType="int">
+ 		select count(n_number) from notice_table_sej
+ 	</select>
+ 	
+ 	
+ 	<!-- admin -->
+ 	<!-- cscenter - notice - save 처리 -->
+	<insert id="noticeSave" parameterType="notice">
+		insert into notice_table_sej(n_title,n_contents,n_filename,n_date)
+			values(#{n_title},#{n_contents},#{n_filename},now())
+	</insert>
+ </mapper>

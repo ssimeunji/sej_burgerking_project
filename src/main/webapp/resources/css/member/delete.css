@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/** common **/
+.header {
+	width: 100%;
+	height: 168px;
+	background-color:#e22219;
+	position: fixed;
+	z-index: 999;
+}
+.contents_box {
+	width: 100%;
+	height: auto;
+	top: 168px;
+	position: absolute;
+	background-color: #fff;
+}
+/** common **/
+
+.user_delete_box {
+	width: 100%;
+	height: auto;
+	background-color: #f2ebe6;
+	padding: 60px 0px;
+}
+.user_delete_box_title {
+	text-align: left;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+.user_delete_content_box {
+	width: 100%;
+	height: auto;
+	margin-bottom: 40px;
+}
+.user_delete_content_title_box {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 15px;
+	text-align: left;
+	padding: 8px 2px;
+}
+.user_delete_content_title_img {
+	height: 100%;
+}
+.user_delete_content_title_txt {
+	font-weight: bold;
+}
+.user_delete_content_1_top {
+	text-align: left;
+	background-color: #f8f8f8;
+	padding: 37px 50px;
+}
+.user_delete_content_1_bottom {
+	width: 100%;
+	height: auto;
+	padding: 37px 50px;
+	background-color: #fff;
+	text-align: left !important;
+}
+.user_delete_content_1_bottom > ul {
+	font-size: 16px;
+	list-style-type: disc;
+}
+.user_delete_content_1_bottom > ul > li {
+	margin-bottom: 4px;
+}
+.user_delete_content_2_box {
+	width: 100%;
+	height: auto;
+	padding: 20px 50px;
+	background-color: #fff;
+}
+.user_delete_content_2 {
+	width: 100%;
+	height: auto;
+	font-weight: bold;
+	border: none;
+}
+
+.user_info_update_content {
+	text-align: left;
+	
+}
+.user_info_update_title {
+	width: 150px;
+	height: 45px;
+	padding-top: 10px;
+	font-weight: bold;
+}
+.user_info_update_txt {
+	width: auto;
+	height: auto;
+	border:none;
+	background-color: #efefef;
+	cursor: text;
+}
+.user_delete_check_box {
+	text-align: right;
+}
+.user_delete_check {
+	width: 30px;
+}
+.user_delete_check_txt {
+	margin: 5px;
+}
+.user_delete_bottom_btn_box{
+	margin-top: 40px;
+}
+.user_delete_bottom_btn {
+	width: 216px;
+	height: 68px;
+	margin: 0px 5px;
+	border: none;
+	border-radius: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+.user_delete_cancel_btn {
+	background-color: #512314;
+}
+.user_delete_btn {
+	background-color: #d72300;
+	color: #fff;
+}
+.user_delete_btn:disabled {
+	background-color: #d72300;
+	opacity: .3;
+	color: #fff;
+}
